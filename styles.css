@@ -18,7 +18,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: auto;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     background-color: var(--darkblue);
 }
 
@@ -41,6 +41,7 @@ body {
 
 #hero-main-text {
     font-size: 48px;
+    font-weight: bold;
     margin: unset;
 }
 
@@ -52,12 +53,9 @@ body {
     color: var(--graytext);
 }
 
-#hero-main-text, #info-header-text {
-    font-weight: bold;
-}
-
 #info-header-text {
     font-size: 36px;
+    font-weight: bold;
     text-align: center;
 }
 
