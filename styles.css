@@ -1,10 +1,16 @@
 :root {
     --blue: #3882f6;
+    --blue-highlight: #4da1fa;
     --darkblue: #1f2937;
     --white: #f9faf8;
     --gray: #e5e7eb;
     --graytext: #e5e7ebaa;
-  }
+    --animation-timing: 0.2s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -73,13 +79,14 @@ blockquote {
     line-height: 3rem;
 }
 
-
 .subtext, #quote-author, blockquote {
     color: var(--darkblue);
 }
 
 
+
 /*** NAV BAR ***/
+
 
 .header {
     position: fixed;
@@ -92,8 +99,8 @@ blockquote {
 }
 
 #header-container {
-    max-width: 100%;
-    margin: 0 225px;
+    max-width: 66vw;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -103,13 +110,23 @@ blockquote {
 
 #header-logo-container {
     position: relative;
+    flex-shrink: 0;
 }
 
-#header-links {
-    position: relative;
-    display: flex;
-    gap: 25px;
+.fa-solid {
+    font-size: 24px;
+    color: var(--white);
 }
+
+
+/* Navbar links for Desktop and Tablet only */
+#header-links {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 25px;
+};
 
 /*** MAIN SECTION ***/
 
@@ -133,7 +150,7 @@ main {
 #sec-hero {
     background-color: var(--darkblue);
     margin: 0 auto;
-    padding: 100px 20px 50px 20px; /* space around the container */
+    padding: 150px 20px 50px 20px; /* space around the container */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -171,11 +188,19 @@ main {
     color: var(--white);
     font-weight: bold;
     text-align: center;
-    padding: 0 15px;
-    margin-top: 7px;
-    border: 10px solid var(--blue);
+    margin-top: 10px;
+    padding: 0 15px 2px 15px;
+    border: 10px solid;
+    border-color:  var(--blue);
     border-radius: 10px;
     cursor: pointer;
+}
+
+#button-signup:hover {
+    background-color: var(--blue-highlight);
+    border-color: var(--blue-highlight);
+    transition: 0.3s;
+    transform: scale(1.025) translate(0, -0.5px);
 }
 
 
@@ -276,6 +301,7 @@ main {
 #button-signup-2 {
     color: var(--white);
     font-weight: bold;
+    margin-top: 3px;
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
@@ -284,9 +310,15 @@ main {
     cursor: pointer;
 }
 
+#button-signup-2:hover {
+    transform: scale(1.025) translate(0, -1px);
+    transition: 0.3s;
+}
+
 /* FOOTER */
 footer {
     margin: 0 auto;
+    padding: 10px;
     text-align: center;
 }
 
@@ -295,6 +327,11 @@ footer {
 
 /* MOBILE */
 @media screen and (max-width: 1200px) {
+
+    #header-links {
+        visibility: hidden;
+    }
+
     #hero-container {
         gap: 10px;
     };
@@ -314,12 +351,31 @@ footer {
 
     #cta-heading {
         padding-bottom: 5px;
+    };
+
+    /* COMPENSATION FOR ALIGNMENT*/
+    #header-logo-container {
+        margin-left: -27px;
+    };
+
+    #button-signup-2 {
+        margin-left: -50px;
+    };
+
+    .linebreak {
+        display: inline-block;
+        line-height: 1.5rem;
     }
 
 }
 
 /* SCREEN */
 @media screen and (min-width: 1201px) {
+
+    /* nav bar */
+   
+
+    /* main */
     #hero-container {
         gap: 150px;
     };
