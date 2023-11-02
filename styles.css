@@ -1,0 +1,342 @@
+:root {
+    --blue: #3882f6;
+    --darkblue: #1f2937;
+    --white: #f9faf8;
+    --gray: #e5e7eb;
+    --graytext: #e5e7ebaa;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--darkblue);
+}
+
+/* TEXT STYLING */
+
+
+.header-logo, #cta-heading {
+    font-size: 24px;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--graytext);
+}
+
+.header-logo, #cta-heading, #hero-main-text {
+    color: var(--white);
+    font-weight: bold;
+}
+
+#hero-main-text {
+    font-size: 48px; /* h1 additional formatting */
+    font-weight: extra-bold;
+    margin: unset;
+}
+
+.hero-secondary-text {
+    line-height: 1.2rem;
+}
+
+.hero-secondary-text, footer p {
+    color: var(--graytext);
+}
+
+#info-header-text {
+    font-size: 36px; /* h2 formatting */
+    text-align: center;
+}
+
+.subtext {
+    text-align: center;
+}
+
+#quote-author {
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 40px;
+    margin-top: -5px;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 100;
+    font-style: italic;
+    line-height: 3rem;
+}
+
+
+.subtext, #quote-author, blockquote {
+    color: var(--darkblue);
+}
+
+
+/*** NAV BAR ***/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 65px;
+    background-color: var(--darkblue);
+    z-index: 999;
+}
+
+#header-container {
+    max-width: 100%;
+    margin: 0 225px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-logo-container {
+    position: relative;
+}
+
+#header-links {
+    position: relative;
+    display: flex;
+    gap: 25px;
+}
+
+/*** MAIN SECTION ***/
+
+main {
+    margin-top: 65px;
+    width: 100vw;
+    height: auto;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80vw; /* compensate for padding */
+    margin: 0 auto; /* this fixed the alignment */
+
+}
+
+/* HERO */
+
+#sec-hero {
+    background-color: var(--darkblue);
+    margin: 0 auto;
+    padding: 100px 20px 50px 20px; /* space around the container */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* No clue why align-items: center doesn't work, so it's been removed */
+    justify-content: space-between;
+}
+
+#hero-text {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+
+#hero-image {
+    width: 500px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6d747d;
+    color: var(--white);
+}
+
+#button-signup {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    text-align: center;
+    padding: 0 15px;
+    margin-top: 7px;
+    border: 10px solid var(--blue);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* INFO */
+
+#sec-random-info {
+    background-color: var(--white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px 75px 20px; /* space around the container */
+}
+
+#sec-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec-boxes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.sec-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height: auto;
+}
+
+.sec-box {
+    width: 150px;
+    height: 150px;
+    border: 4px solid var(--blue);
+    border-radius: 25px;
+}
+
+
+/* TESTIMONIAL */
+
+#sec-testimonial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--gray);
+}
+
+#testimonial-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* CTA */
+
+#sec-cta {
+    background-color: var(--white);
+    padding: 75px 100px;
+}
+
+#callout-container p {
+    margin: 5px;
+}
+
+#callout-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75vw;
+    padding: 45px 100px 40px 95px;
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+#button2-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 2px;
+    width: 200px;
+}
+
+#button-signup-2 {
+    color: var(--white);
+    font-weight: bold;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* MEDIA ARGUMENTS - RESPONSIVE DESIGN */
+
+/* MOBILE */
+@media screen and (max-width: 1200px) {
+    #hero-container {
+        gap: 10px;
+    };
+
+    #sec-testimonial {
+        padding: 90px 65px 75px 65px;
+
+    };
+
+    #testimonial-container {
+        gap: 20px;
+    };
+
+    #callout-container {
+        gap: 25px;
+    };
+
+    #cta-heading {
+        padding-bottom: 5px;
+    }
+
+}
+
+/* SCREEN */
+@media screen and (min-width: 1201px) {
+    #hero-container {
+        gap: 150px;
+    };
+
+    #sec-testimonial {
+    padding: 100px 300px 100px 310px;
+    };
+
+    #testimonial-container {
+        gap: 5px;
+    };
+
+    #callout-container {
+        gap: 50px;
+    };
+    
+    #cta-heading {
+        padding-bottom: 1px;
+    }
+}
