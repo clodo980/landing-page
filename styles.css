@@ -40,8 +40,8 @@ body {
 }
 
 #hero-main-text {
-    font-size: 48px; /* h1 additional formatting */
-    font-weight: extra-bold;
+    font-size: 48px;
+    font-weight: bold;
     margin: unset;
 }
 
@@ -53,8 +53,12 @@ body {
     color: var(--graytext);
 }
 
+#hero-main-text, #info-header-text {
+    font-weight: bold;
+}
+
 #info-header-text {
-    font-size: 36px; /* h2 formatting */
+    font-size: 36px;
     text-align: center;
 }
 
@@ -82,7 +86,6 @@ blockquote {
 .subtext, #quote-author, blockquote {
     color: var(--darkblue);
 }
-
 
 
 /*** NAV BAR ***/
@@ -118,8 +121,6 @@ blockquote {
     color: var(--white);
 }
 
-
-/* Navbar links for Desktop and Tablet only */
 #header-links {
         position: relative;
         display: flex;
@@ -136,12 +137,15 @@ main {
     height: auto;
 }
 
-.main-container {
+#hero-container,
+#sec-info-container,
+#testimonial-container,
+#cta-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 80vw; /* compensate for padding */
-    margin: 0 auto; /* this fixed the alignment */
+    max-width: 80vw;
+    margin: 0 auto;
 
 }
 
@@ -150,7 +154,7 @@ main {
 #sec-hero {
     background-color: var(--darkblue);
     margin: 0 auto;
-    padding: 150px 20px 50px 20px; /* space around the container */
+    padding: 150px 20px 50px 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -160,7 +164,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* No clue why align-items: center doesn't work, so it's been removed */
     justify-content: space-between;
 }
 
@@ -212,7 +215,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding: 50px 20px 75px 20px; /* space around the container */
+    padding: 50px 20px 75px 20px;
 }
 
 #sec-info-container {
@@ -299,10 +302,10 @@ main {
 }
 
 #button-signup-2 {
-    color: var(--white);
-    font-weight: bold;
     margin-top: 3px;
     padding: 10px 30px;
+    color: var(--white);
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
     border: 2px solid var(--white);
@@ -323,37 +326,26 @@ footer {
 }
 
 
-/* MEDIA ARGUMENTS - RESPONSIVE DESIGN */
-
-/* MOBILE */
+/* RESPONSIVE DESIGN - MOBILE */
 @media screen and (max-width: 1200px) {
-
     #header-links {
         visibility: hidden;
-    }
-
+    };
     #hero-container {
         gap: 10px;
     };
-
     #sec-testimonial {
         padding: 90px 65px 75px 65px;
-
     };
-
     #testimonial-container {
         gap: 20px;
     };
-
     #callout-container {
         gap: 25px;
     };
-
     #cta-heading {
         padding-bottom: 5px;
     };
-
-    /* COMPENSATION FOR ALIGNMENT*/
     #header-logo-container {
         margin-left: -27px;
     };
@@ -361,37 +353,26 @@ footer {
     #button-signup-2 {
         margin-left: -50px;
     };
-
     .linebreak {
         display: inline-block;
         line-height: 1.5rem;
     }
-
 }
 
-/* SCREEN */
-@media screen and (min-width: 1201px) {
-
-    /* nav bar */
-   
-
-    /* main */
+/* RESPONSIVE DESIGN - DESKTOP */
+@media screen and (min-width: 1201px) {   
     #hero-container {
         gap: 150px;
     };
-
     #sec-testimonial {
     padding: 100px 300px 100px 310px;
     };
-
     #testimonial-container {
         gap: 5px;
     };
-
     #callout-container {
         gap: 50px;
     };
-    
     #cta-heading {
         padding-bottom: 1px;
     }
